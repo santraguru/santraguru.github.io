@@ -1834,6 +1834,12 @@ input, select, textarea {
 				ul.social li a.fa-linkedin-in {
 					background-color: #006599;
 				}
+				ul.social li a.fa-phone-square {
+					background-color: #FFFFFF;
+				}
+				ul.social li a.fa-envelope-open {
+					background-color: #FFFFFF;
+				}
 
 				ul.social li a.fa-tumblr {
 					background-color: #51718A;
@@ -2136,6 +2142,117 @@ input, select, textarea {
 	#contact footer {
 		font-size: 0.9em;
 	}
+
+	#contact .row .col-12 {
+		display: flex;
+		justify-content: space-between;
+	}
+
+.lef-align {
+	text-align: left; /* Ensures left alignment */
+}
+
+.lef-align ul {
+	list-style: none; /* Removes default bullet points */
+	padding: 0; /* Removes default padding from the list */
+	margin: 0; /* Removes margin */
+}
+
+.lef-align li {
+	display: flex; /* Makes each list item a flex container */
+	align-items: center; /* Vertically centers label and content */
+	margin-bottom: 10px; /* Adds spacing between list items */
+}
+
+.lef-align .label {
+	min-width: 70px; /* Ensures all labels are the same width */
+	font-weight: bold; /* Optional: highlight label text with bold */
+}
+
+.lef-align a {
+	text-decoration: none; /* Removes underline for links */
+	color: inherit; /* Keeps color same as surrounding text */
+}
+
+.box.style2 {
+	position: relative;
+	perspective: 1000px;
+	height: 400px; /* Increased height for inner article section */
+}
+
+.proj-short,
+.proj-desc {
+	/*position: absolute;*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.proj-short {
+	z-index: 2;
+	background-color: #fff;
+}
+
+.proj-desc {
+	transform: rotateY(180deg);
+	z-index: 1;
+	background-color: #fff;
+	color: black; /* Ensure text is visible on the white background */
+	padding: 10px; /* Add some spacing inside the proj-desc box */
+}
+
+.box.style2 {
+	margin-bottom: 20px; /* Add spacing between articles */
+}
+
+.box.style2:hover .proj-short {
+	transform: rotateY(180deg);
+	z-index: 1;
+}
+
+.box.style2:hover .proj-desc {
+	transform: rotateY(360deg);
+	z-index: 2;
+}
+
+/* Ensure consistent height for all image containers and proper alignment */
+.box.style2 .image.featured {
+	display: block;
+	height: 200px; /* Set specific height for the image container */
+	overflow: hidden; /* Ensures the image does not exceed the container */
+	text-align: center;
+}
+
+.box.style2 .image.featured img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Scales the image to fit without distortion */
+}
+
+/* Ensure consistent height for the project short description */
+.box.style2 .proj-short {
+	min-height: 150px; /* Set a uniform minimum height */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; /* Space out content */
+}
+
+/* Ensure consistent height for the long project description */
+.box.style2 .proj-desc {
+	min-height: 130px; /* Set a uniform minimum height */
+	display: flex;
+	align-items: center; /* Center align content vertically */
+	text-align: center;
+}
+
+.proj-desc {
+	margin-top: -300px;
+}
+
+
 
 /* Copyright */
 
